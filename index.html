@@ -1,296 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ================= BASIC SETUP ================= -->
-
-  <!-- Defines character encoding (supports all characters) -->
   <meta charset="UTF-8">
-
-  <!-- Title shown on browser tab -->
   <title>Jay Prakash Yadav | Portfolio</title>
-
-  <!-- Makes website responsive on mobile & tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font (Poppins) for modern text -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome for icons (GitHub, LinkedIn, Email) -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- ================= CSS STYLE START ================= -->
   <style>
-
-    /* Removes default browser margin & padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth; /* Smooth scrolling when clicking menu */
+    /* ===== GLOBAL RESET ===== */
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
     }
 
-    /* Background color and text color of whole page */
-    body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      overflow-x: hidden; /* Prevents horizontal scroll */
+    body{
+      background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;
+      overflow-x:hidden;
     }
 
-    /* Common spacing for all sections */
-    section {
-      padding: 80px 10%;
+    section{
+      padding:90px 10%;
     }
 
-    h1, h2 {
-      font-weight: 800;
+    h1,h2{
+      font-weight:800;
     }
 
-    /* ================= HEADER ================= */
-
-    header {
-      position: fixed; /* Keeps header always on top */
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 15px 10%;
-      display: flex;
-      justify-content: space-between; /* Logo left, menu right */
-      align-items: center;
-      background: rgba(0,0,0,0.4); /* Transparent background */
-      backdrop-filter: blur(10px); /* Glass effect */
-      z-index: 1000;
+    /* ===== HEADER ===== */
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      padding:15px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter:blur(10px);
+      z-index:1000;
     }
 
-    /* Logo container */
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.2rem;
-      font-weight: 700;
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:1.2rem;
+      font-weight:700;
     }
 
-    /* Logo image size */
-    .logo img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+    .logo img{
+      width:42px;
+      height:42px;
+      border-radius:50%;
     }
 
-    /* Navigation list */
-    nav ul {
-      display: flex;
-      gap: 25px;
-      list-style: none;
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
     }
 
-    /* Navigation links */
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      position: relative;
+    nav ul li a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:500;
+      position:relative;
     }
 
-    /* Underline animation */
-    nav ul li a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: -5px;
-      background: #00eaff;
-      transition: 0.3s;
+    nav ul li a::after{
+      content:"";
+      position:absolute;
+      width:0;
+      height:2px;
+      left:0;
+      bottom:-5px;
+      background:#00eaff;
+      transition:.3s;
     }
 
-    nav ul li a:hover::after {
-      width: 100%;
+    nav ul li a:hover::after{
+      width:100%;
     }
 
-    nav ul li a:hover {
-      color: #00eaff;
+    nav ul li a:hover{
+      color:#00eaff;
     }
 
-    /* ================= HERO SECTION ================= */
-
-    .hero {
-      height: 100vh; /* Full screen height */
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 50px;
-      padding-top: 120px; /* Space for fixed header */
+    /* ===== HERO SECTION ===== */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:50px;
+      padding-top:130px;
     }
 
-    .hero-text {
-      max-width: 600px;
+    .hero-text{
+      max-width:620px;
     }
 
-    /* Running "Hi" text */
-    .running-text {
-      font-size: 1.5rem;
-      color: #00eaff;
-      animation: moveText 2s infinite alternate;
+    .running-text{
+      font-size:1.5rem;
+      color:#00eaff;
+      animation:moveText 2s infinite alternate;
     }
 
-    @keyframes moveText {
-      from { transform: translateX(0); }
-      to { transform: translateX(30px); }
+    @keyframes moveText{
+      from{transform:translateX(0)}
+      to{transform:translateX(30px)}
     }
 
-    .hero h1 {
-      font-size: 3.2rem;
+    .hero h1{
+      font-size:2.4rem;
+      margin-top:10px;
+      line-height:1.3;
     }
 
-    .hero span {
-      color: #00eaff; /* Highlight your name */
+    .hero span{
+      color:#00eaff;
     }
 
-    .hero p {
-      margin: 20px 0;
-      font-size: 1.2rem;
-      color: #dcdcdc;
+    .hero p{
+      margin:20px 0;
+      font-size:1.2rem;
+      color:#e0e0e0;
     }
 
-    /* Button common style */
-    .btn {
-      padding: 12px 30px;
-      background: #00eaff;
-      color: #000;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-      display: inline-block;
-      margin-right: 10px;
+    .btn{
+      padding:12px 30px;
+      background:#00eaff;
+      color:#000;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-block;
+      margin-right:12px;
+      transition:.3s;
     }
 
-    .btn:hover {
-      background: #fff;
-      transform: scale(1.05);
+    .btn:hover{
+      background:#fff;
+      transform:scale(1.05);
     }
 
-    /* CV Button style */
-    .cv-btn {
-      background: transparent;
-      color: #00eaff;
-      border: 2px solid #00eaff;
+    .cv-btn{
+      background:transparent;
+      color:#00eaff;
+      border:2px solid #00eaff;
     }
 
-    .cv-btn:hover {
-      background: #00eaff;
-      color: #000;
+    .cv-btn:hover{
+      background:#00eaff;
+      color:#000;
     }
 
-    /* Profile image (normal shape, not circle) */
-    .hero-img img {
-      width: 320px;
-      border-radius: 10px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    .hero-img img{
+      width:320px;
+      border-radius:15px;
+      box-shadow:0 15px 45px rgba(0,0,0,.45);
     }
 
-    /* ================= ABOUT ================= */
-
-    .about {
-      background: rgba(255,255,255,0.05);
-      border-radius: 20px;
+    /* ===== ABOUT ===== */
+    .about{
+      background:rgba(255,255,255,.06);
+      border-radius:20px;
     }
 
-    .about p {
-      margin-top: 20px;
-      line-height: 1.8;
+    .about p{
+      margin-top:20px;
+      line-height:1.9;
+      font-size:1.05rem;
     }
 
-    /* ================= SKILLS & SERVICES ================= */
+    /* ===== SKILLS / SERVICES ===== */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
+/* ===== MOVE SERVICES ICONS RIGHT ===== */
+#services .grid{
+  margin-left: 50px;
+}
+
+    .card{
+      background:rgba(255,255,255,.08);
+      padding:30px;
+      border-radius:18px;
+      text-align:center;
+      transition:.35s;
     }
 
-    .skill-card {
-      background: rgba(255,255,255,0.08);
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      transition: 0.3s;
+    .card:hover{
+      transform:translateY(-12px);
+      background:rgba(0,234,255,.25);
     }
 
-    .skill-card:hover {
-      transform: translateY(-10px);
-      background: rgba(0,234,255,0.2);
+    /* ===== PROJECTS ===== */
+    .project-card{
+      background:linear-gradient(135deg,#1c92d2,#f2fcfe);
+      color:#000;
+      padding:30px;
+      border-radius:20px;
+      transition:.35s;
+      font-weight:600;
     }
 
-    /* ================= PROJECTS ================= */
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
+    .project-card:hover{
+      transform:scale(1.06);
     }
 
-    .project-card {
-      background: linear-gradient(135deg, #1c92d2, #f2fcfe);
-      color: #000;
-      padding: 25px;
-      border-radius: 20px;
-      transition: 0.3s;
+    /* ===== CONTACT ===== */
+    .contact{
+      text-align:center;
     }
 
-    .project-card:hover {
-      transform: scale(1.05);
+    .contact a{
+      font-size:1.7rem;
+      margin:18px;
+      color:#00eaff;
+      transition:.3s;
     }
 
-    /* ================= CONTACT ================= */
-
-    .contact a {
-      font-size: 1.5rem;
-      margin: 15px;
-      color: #00eaff;
+    .contact a:hover{
+      color:#fff;
+      transform:scale(1.2);
     }
 
-    .contact a:hover {
-      color: #fff;
+    /* ===== FOOTER ===== */
+    footer{
+      text-align:center;
+      padding:20px;
+      background:rgba(0,0,0,.45);
+      font-size:.95rem;
     }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.4);
-    }
-
-    /* ================= RESPONSIVE ================= */
-
-    @media (max-width: 900px) {
-      .hero {
-        flex-direction: column-reverse;
-        text-align: center;
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:900px){
+      .hero{
+        flex-direction:column-reverse;
+        text-align:center;
       }
-      nav ul {
-        display: none; /* Hide menu on small screens */
+      nav ul{
+        display:none;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- ===== HEADER ===== -->
 <header>
-  <!-- Logo image + name -->
   <div class="logo">
-    <img src="circular-golden-leaf-branches-award-frame-logo-design-luxury-gold-wreath-png.webp" alt="Logo">
+    <img src="image.png" alt="Logo">
     Jay Prakash Yadav
   </div>
 
-  <!-- Navigation menu -->
   <nav>
     <ul>
       <li><a href="#home">Home</a></li>
@@ -302,87 +281,126 @@
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- ===== HERO (🔥 CHANGED SECTION) ===== -->
 <section class="hero" id="home">
   <div class="hero-text">
     <div class="running-text">Hi 👋</div>
-    <h1>I'm <span>Jay Prakash Yadav</span></h1>
-    <p>Computer Science Engineering Student | AI Enthusiast</p>
 
-    <!-- Button to projects -->
+    <!-- 🔥 CHANGED: Added animated skills after name -->
+    <dev style="font-size:10px"></dev>
+    <h1>
+      I'm <span>Jay Prakash Yadav</span><br>
+      And I'm a <span class="text"></span>
+      
+    </h1>
+
+    <p>Computer Science Engineering Student | AI Enthusiast | Web Developer</p>
+
     <a href="#projects" class="btn">View My Work</a>
 
-    <!-- CV Download Button -->
-    <a href="jay.docx" class="btn cv-btn" download>
-      📄 Download CV
-    </a>
+    <!-- 🔥 CHANGED: CV download button -->
+    <a href="jay.docx" class="btn cv-btn" download>📄 Download CV</a>
   </div>
 
-  <!-- Profile image -->
   <div class="hero-img">
-    <img src="☁︎ 𝚜𝚘𝚙𝚑𝚒𝚊.jpeg" alt="Profile Image">
-  </div>
+  <img src="image.jpg" alt="Jay Prakash Yadav">
+
+
+</div>
+
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- ===== ABOUT ===== -->
 <section class="about" id="about">
   <h2>✨ About Me</h2>
-  <p>I am a Computer Science Engineering student passionate about AI and software development.</p>
+  <p>
+    I am a Computer Science Engineering passionate about
+    Artificial Intelligence, Web Development, and building real-world applications.
+  </p>
 </section>
 
-<!-- ================= SKILLS ================= -->
-<section>
+<!-- ===== SKILLS ===== -->
+<section id="skills">
   <h2>🧠 Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card">C / C++</div>
-    <div class="skill-card">Python</div>
-    <div class="skill-card">HTML & CSS</div>
-    <div class="skill-card">JavaScript</div>
+  <div class="grid">
+    <div class="card">C / C++</div>
+    <div class="card">Python</div>
+    <div class="card">HTML & CSS</div>
+    <div class="card">JavaScript</div>
+    <div class="card">Git & GitHub</div>
+    <div class="card">AI Basics</div>
   </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
-<section id="services">
+<!-- ===== SERVICES ===== -->
   <h2>🛠 Services</h2>
-  <div class="skills-grid">
-    <div class="skill-card">Web Development</div>
-    <div class="skill-card">Frontend Design</div>
-    <div class="skill-card">Python Automation</div>
+  <div class="grid">
+    <div class="card">Web Development</div>
+    <div class="card">Frontend UI Design</div>
+    <div class="card">Python Automation</div>
   </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
+<!-- ===== PROJECTS ===== -->
 <section id="projects">
   <h2>🚀 Projects</h2>
-  <div class="projects-grid">
+  <div class="grid">
     <div class="project-card">AI Voice Assistant</div>
-    <div class="project-card">Portfolio Website</div>
+
+    <div class="project-card">
+      Portfolio Website <br><br>
+      <a href="portfoilo/index.html" target="_blank">
+        View Portfolio
+      </a>
+    </div>
+
     <div class="project-card">C++ DSA Projects</div>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
+
+<!-- ===== CONTACT ===== -->
 <section class="contact" id="contact">
   <h2>📬 Contact Me</h2>
-  
+
+  <!-- 🔥 CHANGED: GitHub link -->
   <a href="https://github.com/jayprakashyadavg07-creator" target="_blank">
-  <i class="fab fa-github"></i>
-</a>
+    <i class="fab fa-github"></i>
+  </a>
 
-  <a href="https://www.linkedin.com/in/jay-prakash-cse " target="_blank">
-  <i class="fab fa-linkedin"></i>
-</a>
+  <!-- 🔥 CHANGED: LinkedIn link -->
+  <a href="https://www.linkedin.com/in/jay-prakash-cse" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
 
-  <a href="mailto:jayprakashyadavg07@gmail.com?subject=Job%20Opportunity&body=Hello%20Jay%2C">
-  <i class="fas fa-envelope"></i>
-</a>
-
+  <!-- 🔥 CHANGED: Gmail mailto -->
+  <a href="mailto:jayprakashyadavg07@gmail.com?subject=Job%20Opportunity">
+    <i class="fas fa-envelope"></i>
+  </a>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- ===== FOOTER ===== -->
 <footer>
   © 2026 Jay Prakash Yadav | Built with ❤️
 </footer>
+
+<!-- 🔥 ADDED: Typed.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- 🔥 ADDED: Typed Animation Script -->
+<script>
+  new Typed(".text", {
+    strings: [
+      "Web Designer",
+      "Frontend Developer",
+      "UI/UX Designer"
+    ],
+    typeSpeed:100,
+    backSpeed:80,
+    backDelay:1200,
+    loop:true
+  });
+</script>
 
 </body>
 </html>
